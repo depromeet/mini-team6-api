@@ -1,5 +1,5 @@
 from django.db import models
-from ..users.models import MyUser
+from apps.users.models import MyUser
 # Create your models here.
 class Party(models.Model):
     owner = models.ForeignKey(MyUser, on_delete=models.CASCADE,verbose_name="주최자")
