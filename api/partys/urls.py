@@ -1,8 +1,8 @@
 from django.urls import path
 
-from .views import APIView
+from .views import PartyView
 
 app_name = 'partys'
 urlpatterns = [
-    path('', APIView.as_view(), name='test'),
+    path('party', PartyView.as_view(), name='PartyView'),
 ]
