@@ -37,6 +37,7 @@ class LoginSerailzier(serializers.ModelSerializer):
             user.name = validated_data['name']
             user.email = validated_data['email']
             user.username = validated_data['email'].split('@')[0]
+            user.save()
 
         return user
 
