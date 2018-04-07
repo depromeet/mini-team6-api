@@ -4,9 +4,22 @@ from rest_framework_jwt.settings import api_settings
 from apps.users.models import MyUser
 
 
+class UserSerializer(serializers.ModelSerializer):
+    # 유저 직렬화
+    class Meta:
+        model = MyUser
+        fields = [
+            'name',
+            'email',
+            'phone',
+            'username',
+            'is_active',
+        ]
+
+
 class LoginSerailzier(serializers.ModelSerializer):
     # 로그인 직렬화
-    class Meat:
+    class Meta:
         model = MyUser
         fields = [
             'provider',

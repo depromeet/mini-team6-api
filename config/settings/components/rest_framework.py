@@ -22,4 +22,6 @@ JWT_AUTH = {
     'JWT_AUTH_HEADER_PREFIX': 'PROJECT',
     'JWT_ALLOW_REFRESH': True,
     'JWT_EXPIRATION_DELTA': datetime.timedelta(days=365),
+    'JWT_RESPONSE_PAYLOAD_HANDLER':
+        'api.utils.jwt_response_payload_handler'
 }
