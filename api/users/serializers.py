@@ -9,6 +9,7 @@ class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = MyUser
         fields = [
+            'id',
             'name',
             'email',
             'phone',
@@ -33,6 +34,7 @@ class LoginSerailzier(serializers.ModelSerializer):
             provider=validated_data['provider'],
             uid=validated_data['uid']
         )
+        print(user, created)
         if created:
             user.name = validated_data['name']
             user.email = validated_data['email']
