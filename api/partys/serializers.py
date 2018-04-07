@@ -3,6 +3,6 @@ from apps.partys.models import Party
 
 class PartySerailzier(serializers.ModelSerializer):
 
-    class Meat:
+    class Meta:
         model = Party
         fields = '__all__'
