@@ -18,10 +18,10 @@ class UseAdmin(admin.ModelAdmin):
             'fields': ('username', 'name', 'email', 'phone'),
         }),
         ('추가 정보', {
-            'fields': ('provider', 'is_active', 'is_admin', 'date_joined'),
+            'fields': ('provider', 'uid', 'is_active', 'is_admin', 'date_joined'),
         })
     )
-    readonly_fields = ['date_joined']
+    readonly_fields = ['uid', 'date_joined']
 
 
 admin.site.register(MyUser, UseAdmin)

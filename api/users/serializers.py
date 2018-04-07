@@ -6,7 +6,7 @@ from apps.users.models import MyUser
 
 class LoginSerailzier(serializers.ModelSerializer):
     # 로그인 직렬화
-    class Meat:
+    class Meta:
         model = MyUser
         fields = [
             'provider',
