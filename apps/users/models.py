@@ -58,7 +58,7 @@ class MyUser(AbstractBaseUser):
         blank=True,
         verbose_name='휴대전화'
     )
-    is_acitve = models.BooleanField(
+    is_active = models.BooleanField(
         default=True,
         verbose_name='활성화 여부'
     )
