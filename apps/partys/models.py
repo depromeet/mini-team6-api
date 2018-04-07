@@ -11,3 +11,11 @@ class Party(models.Model):
 
     def __str__(self):
         return self.title
+
+class Billing(models.Model):
+    party = models.ForeignKey(Party, on_delete=models.CASCADE, verbose_name="회식")
+    user = models.ForeignKey(MyUser, on_delete=models.CASCADE, verbose_name="지불자")
+    is_payment = models.BooleanField(default=True, verbose_name="지불완료")
+
+    def __str__(self):
+        return "%s:%s" %(self.party,self.user)
